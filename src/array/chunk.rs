@@ -5,9 +5,10 @@
 /// # Example
 /// ```rust
 /// use lo_::array::*;
-/// let array = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-/// let size = 4;
+/// let array = vec![1, 2, 3, 4, 5, 6, 7];
+/// let size = 3;
 /// let chunks = chunk(array, size);
+/// assert_eq!(chunks, vec![vec![1, 2, 3], vec![4, 5, 6], vec![7]]);
 ///
 /// ```
 
