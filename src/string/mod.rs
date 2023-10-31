@@ -12,3 +12,6 @@ pub use capitalize::*;
 
 mod lower_first;
 pub use lower_first::*;
+
+mod upper_first;
+pub use upper_first::*;
