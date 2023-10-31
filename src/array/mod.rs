@@ -1,6 +1,9 @@
 mod chunk;
 pub use chunk::*;
 
+mod contains;
+pub use contains::*;
+
 mod difference;
 pub use difference::*;
 
