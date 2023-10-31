@@ -6,3 +6,6 @@ pub use difference::*;
 
 mod intersection;
 pub use intersection::*;
+
+mod uniq;
+pub use uniq::*;
