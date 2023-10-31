@@ -1,6 +1,6 @@
-use std::collections::HashSet;
+#![allow(dead_code)]
 
-/// Creates an array of array values not included in the other given arrays
+/// Creates an array of array values not included in the other given arrays.The order and references of result values are determined by the first array.
 ///
 /// # Example
 /// ```rust
@@ -13,7 +13,7 @@ use std::collections::HashSet;
 /// ```
 pub fn difference<T: Eq + std::hash::Hash + Clone>(array1: &[T], array2: &[T]) -> Vec<T> {
     // Convert the second array to a HashSet for efficient lookup
-    let set2: HashSet<&T> = array2.iter().collect();
+    let set2: std::collections::HashSet<&T> = array2.iter().collect();
 
     // Filter elements in the first array that are not in the second array
     array1
