@@ -4,10 +4,10 @@
 ///
 /// # Example
 /// ```rust
-/// use lo_::array;
+/// use lo_::array::*;
 /// let array = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 /// let size = 4;
-/// let chunks = array::chunk(array, size);
+/// let chunks = chunk(array, size);
 ///
 /// ```
 

@@ -1,3 +1,3 @@
-mod array;
+pub mod array;
 #[cfg(feature = "array")]
 pub use array::*;
