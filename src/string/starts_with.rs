@@ -23,8 +23,10 @@ pub fn starts_with(string: &str, target: &str) -> bool {
 pub fn starts_with_position(string: &str, target: &str, position: Option<usize>) -> bool {
     let start_position = position.unwrap_or(0);
     if start_position > string.len() {
-        false
-    } else if start_position == string.len() {
+        return false;
+    }
+
+    if start_position == string.len() {
         target.is_empty()
     } else {
         let remaining = &string[start_position..];
