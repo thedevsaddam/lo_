@@ -15,3 +15,6 @@ pub use lower_first::*;
 
 mod upper_first;
 pub use upper_first::*;
+
+mod words;
+pub use words::*;
