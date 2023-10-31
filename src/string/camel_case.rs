@@ -19,13 +19,13 @@ pub fn camel_case(string: &str) -> String {
 
         if capitalize_next {
             if result.len() > 0 {
-                result.push_str(&c.to_uppercase().to_string());
+                result.push_str(&c.to_ascii_uppercase().to_string());
             } else {
-                result.push_str(&c.to_lowercase().to_string());
+                result.push_str(&c.to_ascii_lowercase().to_string());
             }
             capitalize_next = false;
         } else {
-            result.push_str(&c.to_lowercase().to_string());
+            result.push_str(&c.to_ascii_lowercase().to_string());
         }
     }
 
