@@ -9,3 +9,6 @@ pub use camel_case::*;
 
 mod capitalize;
 pub use capitalize::*;
+
+mod lower_first;
+pub use lower_first::*;
