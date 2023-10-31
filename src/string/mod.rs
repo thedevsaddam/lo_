@@ -3,3 +3,6 @@ pub use starts_with::*;
 
 mod ends_with;
 pub use ends_with::*;
+
+mod camel_case;
+pub use camel_case::*;
