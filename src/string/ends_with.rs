@@ -19,7 +19,7 @@ pub fn ends_with(string: &str, target: &str) -> bool {
 /// ```rust
 /// use lo_::string::*;
 /// let content = "abc";
-///  assert_eq!(ends_with_position(content, "b", Some(2)), true);
+/// assert_eq!(ends_with_position(content, "b", Some(2)), true);
 ///
 /// ```
 ///

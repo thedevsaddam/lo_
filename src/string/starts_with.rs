@@ -17,7 +17,7 @@ pub fn starts_with(string: &str, target: &str) -> bool {
 /// ```rust
 /// use lo_::string::*;
 /// let content = "abcdef";
-///  assert_eq!(starts_with_position(content, "abc", Some(0)), true);
+/// assert_eq!(starts_with_position(content, "abc", Some(0)), true);
 ///
 /// ```
 pub fn starts_with_position(string: &str, target: &str, position: Option<usize>) -> bool {
