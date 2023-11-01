@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "lo_"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Saddam H <thedevsaddam@gmail.com>"]
 description = "A modern Rust utility library delivering modularity, performance & extras proted from JavaScript Lodash"
 repository = "https://github.com/thedevsaddam/lo_"
@@ -16,10 +16,11 @@ license = "MIT"
 [features]
 default = ["array", "string"]
 
-array = ["chunk", "contains", "difference","intersection", "uniq", "without"]
+array = ["chunk", "contains", "difference", "find", "intersection", "uniq", "without"]
 chunk =[]
 contains =[]
 difference =[]
+find = []
 intersection =[]
 uniq =[]
 without =[]

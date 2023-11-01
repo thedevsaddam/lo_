@@ -7,6 +7,9 @@ pub use contains::*;
 mod difference;
 pub use difference::*;
 
+mod find;
+pub use find::*;
+
 mod intersection;
 pub use intersection::*;
 
