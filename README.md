@@ -14,7 +14,7 @@ lo_ = "0.1.5"
 #### Example
 
 ##### Array
-```rs
+```rust
 use lo_::chunk;
 
 fn main() {
@@ -26,7 +26,7 @@ fn main() {
 ```
 
 ##### String
-```rs
+```rust
 use lo_::words;
 
 fn main() {
