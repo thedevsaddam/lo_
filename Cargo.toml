@@ -1,13 +1,15 @@
 [package]
 edition = "2021"
 name = "lo_"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["Saddam H <thedevsaddam@gmail.com>"]
 description = "A modern Rust utility library delivering modularity, performance & extras proted from JavaScript Lodash"
 repository = "https://github.com/thedevsaddam/lo_"
-license = "MIT"
+homepage = "https://github.com/thedevsaddam/lo_"
+documentation = "https://docs.rs/lo_"
 keywords = ["lodash", "js", "javascript", "utility", "rust-lodash"]
 readme = "README.md"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
