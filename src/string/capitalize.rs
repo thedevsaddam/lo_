@@ -2,8 +2,8 @@
 ///
 /// # Example
 /// ```rust
-/// use lo_::string::*;
-///  assert_eq!(capitalize("FRED"), "Fred");
+/// use lo_::capitalize;
+/// assert_eq!(capitalize("FRED"), "Fred");
 ///
 /// ```
 ///

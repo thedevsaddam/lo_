@@ -2,7 +2,7 @@
 ///
 /// # Example
 /// ```rust
-/// use lo_::array::*;
+/// use lo_::without;
 /// let array = vec![1, 2, 3, 4];
 /// let remove = vec![1, 3, 4];
 /// let result = without(&array, &remove);

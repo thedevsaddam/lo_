@@ -2,9 +2,9 @@
 ///
 /// # Example
 /// ```rust
-/// use lo_::string::*;
-///  assert_eq!(lower_first("Fred"), "fred");
-///  assert_eq!(lower_first("FRED"), "fRED");
+/// use lo_::lower_first;
+/// assert_eq!(lower_first("Fred"), "fred");
+/// assert_eq!(lower_first("FRED"), "fRED");
 ///
 /// ```
 ///

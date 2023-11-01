@@ -2,9 +2,9 @@
 ///
 /// # Example
 /// ```rust
-/// use lo_::string::*;
+/// use lo_::starts_with;
 /// let content = "abcdef";
-///  assert_eq!(starts_with(content, "abc"), true);
+/// assert_eq!(starts_with(content, "abc"), true);
 ///
 /// ```
 pub fn starts_with(string: &str, target: &str) -> bool {

@@ -2,7 +2,7 @@
 ///
 /// # Example
 /// ```rust
-/// use lo_::array::*;
+/// use lo_::contains;
 /// let array = vec![1, 2, 3, 4, 5, 6, 7];
 /// let element = 3;
 /// let result = contains(&array, &element);

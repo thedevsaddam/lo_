@@ -1,10 +1,8 @@
-#![allow(dead_code)]
-
 /// Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
 ///
 /// # Example
 /// ```rust
-/// use lo_::array::*;
+/// use lo_::chunk;
 /// let array = vec![1, 2, 3, 4, 5, 6, 7];
 /// let size = 3;
 /// let chunks = chunk(array, size);

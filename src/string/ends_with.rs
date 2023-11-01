@@ -2,10 +2,10 @@
 ///
 /// # Example
 /// ```rust
-/// use lo_::string::*;
+/// use lo_::ends_with;
 /// let content = "abc";
-///  assert_eq!(ends_with(content, "b"), false);
-///  assert_eq!(ends_with(content, "c"), true);
+/// assert_eq!(ends_with(content, "b"), false);
+/// assert_eq!(ends_with(content, "c"), true);
 ///
 /// ```
 ///

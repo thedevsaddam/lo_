@@ -1,9 +1,9 @@
-/// Converts string to camel case (https://en.wikipedia.org/wiki/Camel_case)
+/// Converts string to camel case `<https://en.wikipedia.org/wiki/Camel_case>`
 ///
 /// # Example
 /// ```rust
-/// use lo_::string::*;
-///  assert_eq!(camel_case("Foo Bar"), "fooBar");
+/// use lo_::camel_case;
+/// assert_eq!(camel_case("Foo Bar"), "fooBar");
 ///
 /// ```
 ///

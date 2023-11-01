@@ -1,10 +1,8 @@
-#![allow(dead_code)]
-
 /// Creates an array of array values not included in the other given arrays.The order and references of result values are determined by the first array.
 ///
 /// # Example
 /// ```rust
-/// use lo_::array::*;
+/// use lo_::difference;
 /// let array1 = vec![1, 2];
 /// let array2 = vec![2, 3];
 /// let result = difference(&array1, &array2);

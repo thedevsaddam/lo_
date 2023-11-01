@@ -1,10 +1,8 @@
-#![allow(dead_code)]
-
 /// Creates a duplicate-free version of an array, in which only the first occurrence of each element is kept. The order of result values is determined by the order they occur in the array.
 ///
 /// # Example
 /// ```rust
-/// use lo_::array::*;
+/// use lo_::uniq;
 /// let input = vec![2, 1, 2];
 /// let output = uniq(input);
 /// assert_eq!(output, vec![2, 1]);

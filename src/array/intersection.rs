@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use std::collections::HashSet;
 use std::hash::Hash;
 
@@ -7,7 +5,7 @@ use std::hash::Hash;
 ///
 /// # Example
 /// ```rust
-/// use lo_::array::*;
+/// use lo_::intersection;
 /// let array1 = vec![1, 2, 3];
 /// let array2 = vec![3,4,5];
 /// let mut result = intersection(&array1, &array2);

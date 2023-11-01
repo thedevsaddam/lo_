@@ -5,7 +5,7 @@ use std::collections::VecDeque;
 ///
 /// # Example
 /// ```rust
-/// use lo_::string::*;
+/// use lo_::words;
 /// let input = "fred, barney, & pebbles";
 /// let expected = vec!["fred", "barney", "pebbles"];
 /// let result = words(input);
