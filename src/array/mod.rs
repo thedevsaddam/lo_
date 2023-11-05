@@ -10,6 +10,9 @@ pub use difference::*;
 mod drop;
 pub use drop::*;
 
+mod drop_right;
+pub use drop_right::*;
+
 mod find;
 pub use find::*;
 
