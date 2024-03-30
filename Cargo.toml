@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "lo_"
-version = "0.1.7"
+version = "0.1.8"
 authors = ["Saddam H <thedevsaddam@gmail.com>"]
 description = "A modern Rust utility library delivering modularity, performance & extras proted from JavaScript Lodash"
 repository = "https://github.com/thedevsaddam/lo_"
@@ -26,7 +26,7 @@ uniq =[]
 without =[]
 
 
-string = ["camel_case", "capitalize", "ends_with", "lower_first", "starts_with", "upper_first", "words"]
+string = ["camel_case", "capitalize", "ends_with", "lower_first", "starts_with", "upper_first", "words", "template"]
 camel_case = []
 capitalize = []
 ends_with = []
@@ -34,6 +34,8 @@ lower_first = []
 starts_with = []
 upper_first = []
 words = ["regex"]
+template = []
+
 
 
 

@@ -8,7 +8,7 @@ Depend on lorust in Cargo.toml:
 
 ```toml
 [dependencies]
-lo_ = "0.1.5"
+lo_ = "0.1.8"
 ```
 
 #### Example

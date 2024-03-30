@@ -18,3 +18,6 @@ pub use upper_first::*;
 
 mod words;
 pub use words::*;
+
+mod template;
+pub use template::*;
