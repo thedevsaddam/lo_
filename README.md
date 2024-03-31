@@ -1,6 +1,6 @@
 Lo_ as Lodash
 ---
-A modern Rust utility library delivering modularity, performance & extras proted from JavaScript Lodash
+A modern Rust utility library delivering modularity, performance & extras ported from JavaScript Lodash
 
 ## Usage
 
