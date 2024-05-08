@@ -8,7 +8,7 @@ Depend on lorust in Cargo.toml:
 
 ```toml
 [dependencies]
-lo_ = "0.1.8"
+lo_ = "0.1.10"
 ```
 
 #### Example
@@ -33,6 +33,25 @@ fn main() {
     let input = "fred, barney, & pebbles";
     let result = words(input);
     println!("{:?}", result); // ["fred", "barney", "pebbles"]
+}
+
+```
+
+##### Condition
+```rust
+use lo_::ternary;
+
+let iam_tom_or_zerry = |args: i32| -> String {
+    if args == 1 {
+        String::from("Tom")
+    } else {
+        String::from("Zerry")
+    }
+};
+
+fn main() {
+    println!("{:?}", ternary("Tom" == iam_tom_or_zerry(1), "Yes", "No")); // Yes
+    println!("{:?}", ternary("Tom" == iam_tom_or_zerry(2), "Yes", "No")); // No
 }
 
 ```

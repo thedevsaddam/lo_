@@ -32,4 +32,18 @@ mod tests {
         assert_eq!(ternary(true, 16, 18), 16);
         assert_eq!(ternary(false, 16, 18), 18);
     }
+
+    #[test]
+    fn test_ternary_eval() {
+        let iam_tom_or_zerry = |args: i32| -> String {
+            if args == 1 {
+                String::from("Tom")
+            } else {
+                String::from("Zerry")
+            }
+        };
+
+        assert_eq!(ternary("Tom" == iam_tom_or_zerry(1), "Yes", "No"), "Yes");
+        assert_eq!(ternary("Tom" == iam_tom_or_zerry(21), "Yes", "No"), "No");
+    }
 }
