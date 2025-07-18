@@ -8,12 +8,12 @@ Depend on lorust in Cargo.toml:
 
 ```toml
 [dependencies]
-lo_ = "0.1.10"
+lo_ = "0.2.0"
 ```
 
-#### Example
+### Example
 
-##### Array
+#### Collection 
 ```rust
 use lo_::chunk;
 
@@ -25,7 +25,7 @@ fn main() {
 }
 ```
 
-##### String
+#### String
 ```rust
 use lo_::words;
 
@@ -37,21 +37,51 @@ fn main() {
 
 ```
 
-##### Condition
-```rust
-use lo_::ternary;
+###### Implement the `Transform` trait to centralize string utilities, reduce boilerplate, and improve code clarity.
 
-let iam_tom_or_zerry = |args: i32| -> String {
-    if args == 1 {
-        String::from("Tom")
-    } else {
-        String::from("Zerry")
-    }
-};
+```rust
+use lo_::Transform;
 
 fn main() {
-    println!("{:?}", ternary("Tom" == iam_tom_or_zerry(1), "Yes", "No")); // Yes
-    println!("{:?}", ternary("Tom" == iam_tom_or_zerry(2), "Yes", "No")); // No
+    let input = "fred, barney, & pebbles";
+    println!("{:?}", input.words()); // ["fred", "barney", "pebbles"]
+    
+    println!("{:?}", "Rust is awesome 🚀".to_slug()); // "rust-is-awesome"
+
+    let num: Option<i32> = "123".to_safe_parse();
+    println!("{:?}", num);  // Output: Some(123)
 }
 
 ```
+
+#### General
+```rust
+use std::time::Duration;
+use lo_::Retry;
+
+
+fn might_fail(attempt: &mut i32) -> Result<&'static str, &'static str> {
+    *attempt += 1;
+    if *attempt < 3 {
+        Err("fail")
+    } else {
+        Ok("success")
+    }
+}
+
+fn main() {
+    let mut count = 0;
+
+    let result = Err::<&str, &str>("initial").retry(5, Duration::from_millis(50), || {
+        might_fail(&mut count)
+    });
+
+    println!("{:?}", result); // prints Ok("success") after retrying
+}
+
+```
+
+---
+For more details and API documentation, please visit:
+https://docs.rs/lo_/latest/lo_/
+

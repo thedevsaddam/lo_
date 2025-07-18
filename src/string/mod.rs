@@ -1,3 +1,6 @@
+mod transform;
+pub use transform::Transform;
+
 mod starts_with;
 pub use starts_with::*;
 
@@ -16,8 +19,20 @@ pub use lower_first::*;
 mod upper_first;
 pub use upper_first::*;
 
+mod snake_case;
+pub use snake_case::*;
+
 mod words;
 pub use words::*;
 
 mod template;
 pub use template::*;
+
+mod slugify;
+pub use slugify::*;
+
+mod truncate_middle;
+pub use truncate_middle::*;
+
+mod safe_parse;
+pub use safe_parse::*;

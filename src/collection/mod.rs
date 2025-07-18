@@ -24,3 +24,12 @@ pub use uniq::*;
 
 mod without;
 pub use without::*;
+
+mod omit_keys;
+pub use omit_keys::*;
+
+mod pick_keys;
+pub use pick_keys::*;
+
+mod zip_with;
+pub use zip_with::*;

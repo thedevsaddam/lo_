@@ -1,11 +1,14 @@
-pub mod array;
-#[cfg(feature = "array")]
-pub use array::*;
-
 pub mod string;
 #[cfg(feature = "string")]
 pub use string::*;
 
-pub mod condition;
-#[cfg(feature = "condition")]
-pub use condition::*;
+#[cfg(feature = "transform")]
+pub use string::Transform;
+
+pub mod collection;
+#[cfg(feature = "collection")]
+pub use collection::*;
+
+pub mod general;
+#[cfg(feature = "general")]
+pub use general::*;
