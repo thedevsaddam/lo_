@@ -7,7 +7,7 @@ use std::hash::Hash;
 /// ```rust
 /// use lo_::intersection;
 /// let array1 = vec![1, 2, 3];
-/// let array2 = vec![3,4,5];
+/// let array2 = vec![3, 4, 5];
 /// let mut result = intersection(&array1, &array2);
 /// assert_eq!(result, vec![3]);
 ///
