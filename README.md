@@ -8,7 +8,7 @@ Depend on lorust in Cargo.toml:
 
 ```toml
 [dependencies]
-lo_ = "0.2.0"
+lo_ = { version = "0.2.0", features = ["transform", "async_retry"] }
 ```
 
 ### Example
@@ -27,12 +27,12 @@ fn main() {
 
 #### String
 ```rust
-use lo_::words;
+use lo_::camel_case;
 
 fn main() {
-    let input = "fred, barney, & pebbles";
-    let result = words(input);
-    println!("{:?}", result); // ["fred", "barney", "pebbles"]
+    let input = "Foo Bar";
+    let result = camel_case(input);
+    println!("{:?}", result); // "fooBar"
 }
 
 ```
@@ -44,39 +44,32 @@ use lo_::Transform;
 
 fn main() {
     let input = "fred, barney, & pebbles";
-    println!("{:?}", input.words()); // ["fred", "barney", "pebbles"]
-    
+    println!("{:?}", input.to_words()); // ["fred", "barney", "pebbles"]
+
     println!("{:?}", "Rust is awesome 🚀".to_slug()); // "rust-is-awesome"
 
     let num: Option<i32> = "123".to_safe_parse();
-    println!("{:?}", num);  // Output: Some(123)
+    println!("{:?}", num); // Some(123)
 }
 
 ```
 
 #### General
 ```rust
+use lo_::retry;
 use std::time::Duration;
-use lo_::Retry;
-
-
-fn might_fail(attempt: &mut i32) -> Result<&'static str, &'static str> {
-    *attempt += 1;
-    if *attempt < 3 {
-        Err("fail")
-    } else {
-        Ok("success")
-    }
-}
 
 fn main() {
     let mut count = 0;
-
-    let result = Err::<&str, &str>("initial").retry(5, Duration::from_millis(50), || {
-        might_fail(&mut count)
+    let result = retry(4, Duration::from_millis(10), || {
+        count += 1;
+        if count < 3 {
+            Err("fail")
+        } else {
+            Ok("success")
+        }
     });
-
-    println!("{:?}", result); // prints Ok("success") after retrying
+    println!("{:?} after {:?} retry", result, count); // Ok("success") after 3 retry
 }
 
 ```
