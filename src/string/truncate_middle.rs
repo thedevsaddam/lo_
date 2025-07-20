@@ -10,6 +10,7 @@
 /// assert_eq!(truncate_middle("hello_world", 7), "hel…rld");
 /// assert_eq!(truncate_middle("short", 10), "short");
 /// assert_eq!(truncate_middle("truncate", 5), "tr…te");
+///
 /// ```
 pub fn truncate_middle(input: &str, max_len: usize) -> String {
     let len = input.chars().count();
@@ -36,7 +37,7 @@ pub fn truncate_middle(input: &str, max_len: usize) -> String {
         .rev()
         .collect();
 
-    format!("{}…{}", start_part, end_part)
+    format!("{start_part}…{end_part}")
 }
 
 #[cfg(test)]

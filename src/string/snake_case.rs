@@ -1,3 +1,35 @@
+/// Converts a string to `snake_case`.
+///
+/// This function transforms a string into `snake_case` format:
+/// - Uppercase letters are converted to lowercase and preceded with an underscore
+///   when transitioning from lowercase or digit.
+/// - Sequences of non-alphanumeric characters are replaced with a single underscore.
+/// - Leading, trailing, and repeated underscores are trimmed.
+/// - Unicode characters are ignored for casing and separation.
+///
+/// # Examples
+///
+/// ```
+/// use lo_::snake_case;
+/// let s = "HelloWorld";
+/// assert_eq!(snake_case(s), "hello_world");
+///
+/// let s = "HTTPRequest";
+/// assert_eq!(snake_case(s), "http_request");
+///
+/// let s = "convertThisString";
+/// assert_eq!(snake_case(s), "convert_this_string");
+///
+/// let s = "some-mixed_string With spacesAndCAPS";
+/// assert_eq!(snake_case(s), "some_mixed_string_with_spaces_and_caps");
+///
+/// let s = "already_snake_case";
+/// assert_eq!(snake_case(s), "already_snake_case");
+///
+/// let s = "  Hello---World!!! ";
+/// assert_eq!(snake_case(s), "hello_world");
+///
+/// ```
 pub fn snake_case(s: &str) -> String {
     let mut result = String::with_capacity(s.len());
     let mut chars = s.chars().peekable();
@@ -12,14 +44,12 @@ pub fn snake_case(s: &str) -> String {
             if ch.is_ascii_uppercase() {
                 if let Some(prev) = prev_char {
                     let next_is_lower = next_char.map(|c| c.is_ascii_lowercase()).unwrap_or(false);
-                    if prev.is_ascii_lowercase()
+                    if (prev.is_ascii_lowercase()
                         || prev.is_ascii_digit()
-                        || (prev.is_ascii_uppercase() && next_is_lower)
+                        || (prev.is_ascii_uppercase() && next_is_lower))
+                        && !prev_was_underscore
                     {
-                        if !prev_was_underscore {
-                            result.push('_');
-                            // prev_was_underscore = true;
-                        }
+                        result.push('_');
                     }
                 }
                 result.push(ch.to_ascii_lowercase());

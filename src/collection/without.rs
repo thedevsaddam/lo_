@@ -11,8 +11,8 @@
 /// ```
 pub fn without<T: PartialEq + Clone>(arr: &[T], values: &[T]) -> Vec<T> {
     arr.iter()
+        .filter(|&x| !values.contains(x))
         .cloned()
-        .filter(|x| !values.contains(&x))
         .collect()
 }
 

@@ -26,6 +26,7 @@ use std::{thread::sleep, time::Duration};
 ///     }
 /// });
 /// assert_eq!(result, Ok("success"));
+///
 /// ```
 pub fn retry<T, E, F>(times: usize, delay: Duration, mut op: F) -> Result<T, E>
 where

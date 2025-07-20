@@ -10,7 +10,7 @@
 /// ```
 ///
 pub fn ends_with(string: &str, target: &str) -> bool {
-    return ends_with_position(string, target, None);
+    ends_with_position(string, target, None)
 }
 
 /// Checks if string ends with the given target string with the given position

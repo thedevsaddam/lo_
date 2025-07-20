@@ -8,7 +8,7 @@
 ///
 /// ```
 pub fn starts_with(string: &str, target: &str) -> bool {
-    return starts_with_position(string, target, None);
+    starts_with_position(string, target, None)
 }
 
 /// Checks if string starts with the given target string at some given position

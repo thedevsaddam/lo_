@@ -33,3 +33,9 @@ pub use pick_keys::*;
 
 mod zip_with;
 pub use zip_with::*;
+
+mod assign;
+pub use assign::*;
+
+mod subset;
+pub use subset::*;

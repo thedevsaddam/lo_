@@ -14,7 +14,6 @@
 /// assert_eq!(ternary(false, "a", "b"), "b");
 ///
 /// ```
-
 pub fn ternary<T>(condition: bool, if_output: T, else_output: T) -> T {
     if condition {
         if_output

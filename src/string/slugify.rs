@@ -7,6 +7,7 @@
 /// assert_eq!(slugify("Hello World!"), "hello-world");
 /// assert_eq!(slugify("Rust is awesome 🚀"), "rust-is-awesome");
 /// assert_eq!(slugify(" Clean   URL__String "), "clean-url-string");
+///
 /// ```
 pub fn slugify(input: &str) -> String {
     use regex::Regex;

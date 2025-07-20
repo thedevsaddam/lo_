@@ -10,6 +10,7 @@ use std::hash::Hash;
 /// let map = HashMap::from([("a", 1), ("b", 2), ("c", 3)]);
 /// let result = pick_keys(&map, ["a", "b"]);
 /// assert_eq!(result, HashMap::from([("a", 1), ("b", 2)]));
+///
 /// ```
 pub fn pick_keys<K, V, I>(map: &HashMap<K, V>, keys: I) -> HashMap<K, V>
 where

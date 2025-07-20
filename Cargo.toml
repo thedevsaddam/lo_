@@ -1,13 +1,14 @@
 [package]
 edition = "2021"
 name = "lo_"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Saddam H <thedevsaddam@gmail.com>"]
 description = "A modern Rust utility library delivering modularity, performance & extras ported from JavaScript Lodash"
 repository = "https://github.com/thedevsaddam/lo_"
 homepage = "https://github.com/thedevsaddam/lo_"
 documentation = "https://docs.rs/lo_"
 keywords = ["lodash", "js", "javascript", "utility", "rust-lodash"]
+categories = ["data-structures", "text-processing", "asynchronous"]
 readme = "README.md"
 license = "MIT"
 
@@ -15,7 +16,8 @@ license = "MIT"
 default = ["collection", "string", "general"]
 
 # Collection utilities
-collection = ["chunk", "contains", "difference", "find", "intersection", "uniq", "without", "omit_keys", "pick_keys", "drop", "drop_right", "zip_with"]
+collection = ["chunk", "contains", "difference", "find", "intersection", "uniq", "without", "omit_keys", "pick_keys", "drop", "drop_right", "zip_with", "assign", "subset"]
+transform = []
 chunk = []
 contains = []
 difference = []
@@ -28,11 +30,14 @@ pick_keys = []
 drop = []
 drop_right = []
 zip_with = []
-transform = []
+assign = []
+subset = []
 
 # String utilities
-string = ["camel_case", "capitalize", "ends_with", "lower_first", "starts_with", "upper_first", "words", "template", "slugify", "truncate_middle", "safe_parse"]
+string = ["camel_case", "title_case", "snake_case", "capitalize", "ends_with", "lower_first", "starts_with", "upper_first", "words", "template", "slugify", "truncate_middle", "safe_parse", "str_split", "str_pad", "str_rev", "wordwrap"]
 camel_case = []
+title_case = []
+snake_case = []
 capitalize = []
 ends_with = []
 lower_first = []
@@ -43,6 +48,10 @@ template = []
 slugify = []
 truncate_middle = []
 safe_parse = []
+str_split = []
+str_pad = []
+str_rev = []
+wordwrap = []
 
 # General utilities
 general = ["tap", "retry", "ternary", "ternary_f"]

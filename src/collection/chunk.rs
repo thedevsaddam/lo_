@@ -9,7 +9,6 @@
 /// assert_eq!(chunks, vec![vec![1, 2, 3], vec![4, 5, 6], vec![7]]);
 ///
 /// ```
-
 pub fn chunk<T: Clone>(array: Vec<T>, size: usize) -> Vec<Vec<T>> {
     let mut result = Vec::new();
     let mut chunk = Vec::new();

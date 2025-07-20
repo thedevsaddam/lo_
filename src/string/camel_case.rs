@@ -18,14 +18,14 @@ pub fn camel_case(string: &str) -> String {
         }
 
         if capitalize_next {
-            if result.len() > 0 {
-                result.push_str(&c.to_ascii_uppercase().to_string());
+            if !result.is_empty() {
+                result.push(c.to_ascii_uppercase());
             } else {
-                result.push_str(&c.to_ascii_lowercase().to_string());
+                result.push(c.to_ascii_lowercase());
             }
             capitalize_next = false;
         } else {
-            result.push_str(&c.to_ascii_lowercase().to_string());
+            result.push(c.to_ascii_lowercase());
         }
     }
 

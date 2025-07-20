@@ -11,6 +11,7 @@
 ///
 /// let result: Vec<_> = zip_with(a.into_iter(), b.into_iter(), |x, y| x + y).collect();
 /// assert_eq!(result, vec![5, 7, 9]);
+///
 /// ```
 pub fn zip_with<A, B, C, I, J, F>(a: I, b: J, mut f: F) -> impl Iterator<Item = C>
 where

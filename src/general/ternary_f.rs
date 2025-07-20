@@ -29,6 +29,7 @@
 ///
 /// let result_sub = ternary_f(false, add, subtract);
 /// assert_eq!(result_sub, 2);
+///
 /// ```
 pub fn ternary_f<T, F1, F2>(condition: bool, if_func: F1, else_func: F2) -> T
 where

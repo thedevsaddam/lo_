@@ -14,7 +14,7 @@ use std::collections::VecDeque;
 /// ```
 ///
 pub fn words(string: &str) -> Vec<String> {
-    return words_with_pattern(string, None);
+    words_with_pattern(string, None)
 }
 
 /// Splits string into an array of its words with the given pattern.
@@ -32,12 +32,10 @@ pub fn words(string: &str) -> Vec<String> {
 ///
 pub fn words_with_pattern(string: &str, re: Option<Regex>) -> Vec<String> {
     match re {
-        Some(rgx) => {
-            return rgx
-                .find_iter(string)
-                .filter_map(|w| Some(w.as_str().to_string()))
-                .collect();
-        }
+        Some(rgx) => rgx
+            .find_iter(string)
+            .map(|w| w.as_str().to_string())
+            .collect(),
         None => {
             let mut result = VecDeque::new();
             let mut word = String::new();
@@ -45,11 +43,9 @@ pub fn words_with_pattern(string: &str, re: Option<Regex>) -> Vec<String> {
             for char in string.chars() {
                 if char.is_alphanumeric() {
                     word.push(char);
-                } else {
-                    if !word.is_empty() {
-                        result.push_back(word);
-                        word = String::new();
-                    }
+                } else if !word.is_empty() {
+                    result.push_back(word);
+                    word = String::new();
                 }
             }
 
@@ -57,7 +53,7 @@ pub fn words_with_pattern(string: &str, re: Option<Regex>) -> Vec<String> {
                 result.push_back(word);
             }
 
-            return result.into_iter().collect();
+            result.into_iter().collect()
         }
     }
 }

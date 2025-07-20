@@ -1,5 +1,8 @@
 mod transform;
+pub use transform::CaseTransform;
 pub use transform::Transform;
+pub use transform::UtilityTransform;
+pub use transform::WordTransform;
 
 mod starts_with;
 pub use starts_with::*;
@@ -22,6 +25,9 @@ pub use upper_first::*;
 mod snake_case;
 pub use snake_case::*;
 
+mod title_case;
+pub use title_case::*;
+
 mod words;
 pub use words::*;
 
@@ -36,3 +42,15 @@ pub use truncate_middle::*;
 
 mod safe_parse;
 pub use safe_parse::*;
+
+mod str_split;
+pub use str_split::*;
+
+mod str_rev;
+pub use str_rev::*;
+
+mod str_pad;
+pub use str_pad::*;
+
+mod wordwrap;
+pub use wordwrap::*;

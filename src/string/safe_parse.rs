@@ -10,6 +10,7 @@ use std::str::FromStr;
 /// assert_eq!(safe_parse::<i32>("42"), Some(42));
 /// assert_eq!(safe_parse::<f64>("not-a-number"), None);
 /// assert_eq!(safe_parse::<bool>("true"), Some(true));
+///
 /// ```
 pub fn safe_parse<T: FromStr>(s: &str) -> Option<T> {
     T::from_str(s).ok()

@@ -10,6 +10,7 @@ use std::hash::Hash;
 /// let mut map = HashMap::from([("a", 1), ("b", 2), ("c", 3)]);
 /// let result = omit_keys(&map, ["a", "c"]);
 /// assert_eq!(result, HashMap::from([("b", 2)]));
+///
 /// ```
 pub fn omit_keys<K, V, I>(map: &HashMap<K, V>, keys: I) -> HashMap<K, V>
 where

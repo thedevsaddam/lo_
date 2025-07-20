@@ -23,7 +23,7 @@ pub fn template(txt: &str, values: &HashMap<&str, &str>) -> String {
     let mut parsed_txt = String::from(txt);
 
     for (key, value) in values.iter() {
-        let pattern = format!("\\{{{}\\}}", key);
+        let pattern = format!("\\{{{key}\\}}");
         let re = Regex::new(&pattern).unwrap();
         parsed_txt = re
             .replace_all(&parsed_txt, |_captures: &regex::Captures<'_>| {

@@ -10,6 +10,7 @@
 ///     .sum::<i32>();
 /// assert_eq!(result, 6);
 ///
+/// ```
 pub fn tap<T, F>(val: T, f: F) -> T
 where
     F: FnOnce(&T),
