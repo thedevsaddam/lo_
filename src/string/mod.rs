@@ -1,8 +1,5 @@
 mod transform;
-pub use transform::CaseTransform;
-pub use transform::Transform;
-pub use transform::UtilityTransform;
-pub use transform::WordTransform;
+pub use transform::*;
 
 mod starts_with;
 pub use starts_with::*;

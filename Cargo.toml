@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "lo_"
-version = "0.2.2"
+version = "0.3.0"
 authors = ["Saddam H <thedevsaddam@gmail.com>"]
 description = "A modern Rust utility library delivering modularity, performance & extras ported from JavaScript Lodash"
 repository = "https://github.com/thedevsaddam/lo_"
@@ -17,7 +17,6 @@ default = ["collection", "string", "general"]
 
 # Collection utilities
 collection = ["chunk", "contains", "difference", "find", "intersection", "uniq", "without", "omit_keys", "pick_keys", "drop", "drop_right", "zip_with", "assign", "subset"]
-transform = []
 chunk = []
 contains = []
 difference = []
@@ -68,4 +67,4 @@ regex = { version = "1.10.2", optional = true }
 tokio = { version = "1.37", optional = true, features = ["time", "macros", "rt"] }
 
 [package.metadata.docs.rs]
-features = ["async_retry", "transform"]
+features = ["async_retry"]

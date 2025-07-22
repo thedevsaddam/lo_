@@ -129,14 +129,6 @@ impl CaseTransform for String {}
 impl WordTransform for String {}
 impl UtilityTransform for String {}
 
-/// The `Transform` trait provides common string manipulation methods for
-/// string-like types, enabling easy and consistent transformations such as
-/// case conversions, truncation, parsing, and templating.
-///
-pub trait Transform: CaseTransform + WordTransform + UtilityTransform {}
-
-impl<T> Transform for T where T: CaseTransform + WordTransform + UtilityTransform {}
-
 #[cfg(test)]
 mod tests {
     use super::*;
