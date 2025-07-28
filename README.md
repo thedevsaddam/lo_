@@ -1,4 +1,4 @@
-Lo_ as Lodash &emsp;
+Lo_ as Lodash
 ---
 
 [<img alt="github" src="https://img.shields.io/badge/github-thedevsaddam/lo__-34495e?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/thedevsaddam/lo_)
@@ -50,10 +50,14 @@ println!("to_title_case: {:?}", s.to_title_case()); // "Hello World"
 println!("to_lower_first: {:?}", s.to_lower_first()); // "helloWorld"
 println!("to_upper_first: {:?}", s.to_upper_first()); // "HelloWorld"
 
+let k = "My Résumé";
+println!("to_kebab_case: {:?}", k.to_kebab_case()); // "my-resume"
+
 use lo_::WordTransform;
 
 let input = "fred, barney, & pebbles";
 println!("to_words: {:?}", input.to_words()); // ["fred", "barney", "pebbles"]
+
 println!("to_slug: {:?}", "Rust is awesome 🚀".to_slug()); // "rust-is-awesome"
 
 use lo_::UtilityTransform;
