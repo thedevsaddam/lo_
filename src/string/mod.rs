@@ -19,8 +19,14 @@ pub use lower_first::*;
 mod upper_first;
 pub use upper_first::*;
 
+mod kebab_case;
+pub use kebab_case::*;
+
 mod snake_case;
 pub use snake_case::*;
+
+mod screaming_snake_case;
+pub use screaming_snake_case::*;
 
 mod title_case;
 pub use title_case::*;

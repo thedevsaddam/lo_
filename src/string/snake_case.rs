@@ -1,4 +1,4 @@
-/// Converts a string to `snake_case`.
+/// Converts a string to [snake_case](https://en.wikipedia.org/wiki/Snake_case).
 ///
 /// This function transforms a string into `snake_case` format:
 /// - Uppercase letters are converted to lowercase and preceded with an underscore

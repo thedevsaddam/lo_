@@ -1,4 +1,4 @@
-/// Converts a string to Title Case.
+/// Converts a string to [Title Case](https://en.wikipedia.org/wiki/Title_case).
 ///
 /// This means the first letter of each word is capitalized,
 /// and the rest of the letters are lowercased. Words are

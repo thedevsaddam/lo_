@@ -13,11 +13,14 @@ use std::str::FromStr;
 /// let s = "hello_world";
 /// assert_eq!(s.to_camel_case(), "helloWorld");
 /// assert_eq!(s.to_snake_case(), "hello_world");
+/// assert_eq!(s.to_screaming_snake_case(), "HELLO_WORLD");
 /// assert_eq!(s.to_title_case(), "Hello_world");
 /// assert_eq!(s.to_lower_first(), "hello_world");
 /// assert_eq!(s.to_upper_first(), "Hello_world");
 /// assert_eq!(s.to_slug(), "hello-world");
 /// assert_eq!(s.to_capitalize(), "Hello_world");
+/// assert_eq!("My Résumé".to_kebab_case(), "my-resume");
+///
 /// ```
 pub trait CaseTransform: ToOwned + AsRef<str> {
     fn to_lower_first(&self) -> String {
@@ -29,8 +32,14 @@ pub trait CaseTransform: ToOwned + AsRef<str> {
     fn to_camel_case(&self) -> String {
         camel_case(self.as_ref())
     }
+    fn to_kebab_case(&self) -> String {
+        kebab_case(self.as_ref())
+    }
     fn to_snake_case(&self) -> String {
         snake_case(self.as_ref())
+    }
+    fn to_screaming_snake_case(&self) -> String {
+        screaming_snake_case(self.as_ref())
     }
     fn to_title_case(&self) -> String {
         title_case(self.as_ref())

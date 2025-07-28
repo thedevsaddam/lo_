@@ -1,4 +1,4 @@
-/// Converts string to camel case `<https://en.wikipedia.org/wiki/Camel_case>`
+/// Converts string to [camelCase](https://en.wikipedia.org/wiki/Camel_case).
 ///
 /// # Example
 /// ```rust
